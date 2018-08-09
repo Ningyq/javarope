@@ -3,9 +3,6 @@ package Thread;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Created by Coldwarm on 2018/8/9.
- */
 public class BasicExecutor {
     public static void main(String[] args) {
         final int THREAD_NUMBER =3;
