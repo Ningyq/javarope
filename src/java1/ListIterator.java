@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by Coldwarm on 18/7/29.
- */
 public class ListIterator {
 
     public static void main(String[] args) {

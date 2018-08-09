@@ -1,8 +1,5 @@
 package java2;
 
-/**
- * Created by Coldwarm on 2018/8/8.
- */
 public class Synchronized1 {
     public static void main(String[] args) throws InterruptedException {
         ComputingThread ct = new ComputingThread();

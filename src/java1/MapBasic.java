@@ -5,9 +5,6 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created by Coldwarm on 18/7/29.
- */
 public class MapBasic {
 
     public static void main(String[] args) {

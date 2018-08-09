@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- * Created by Coldwarm on 18/7/29.
- */
 public class ListforEach {
 
 

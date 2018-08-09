@@ -4,9 +4,6 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by Coldwarm on 2018/8/8.
- */
 public class ThreadTimer extends TimerTask {
 
     @Override

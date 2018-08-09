@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by Coldwarm on 2018/8/1.
- */
 class Product {
     private int id;
     private String name;

@@ -1,8 +1,5 @@
 package java1;
 
-/**
- * Created by Coldwarm on 18/7/29.
- */
 public class Method {
     public static <T> boolean isEqual(GenericsClass1<T> g1, GenericsClass1<T> g2){
         return g1.getItem().equals(g2.getItem());

@@ -1,8 +1,5 @@
 package java2;
 
-/**
- * Created by Coldwarm on 2018/8/4.
- */
 public class BasicDaemonThread {
 
     public static void main(String[] args) throws InterruptedException {

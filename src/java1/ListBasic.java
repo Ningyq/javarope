@@ -3,9 +3,6 @@ package java1;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Coldwarm on 18/7/29.
- */
 public class ListBasic {
     public static void main(String[] args) {
         List<String> vowels = new ArrayList<>();

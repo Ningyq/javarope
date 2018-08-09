@@ -1,8 +1,5 @@
 package java2;
 
-/**
- * Created by Coldwarm on 2018/8/8.
- */
 public class AccountingSync implements Runnable {
     static int i = 0;
 
