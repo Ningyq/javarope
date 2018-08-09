@@ -3,8 +3,8 @@ package Thread;
 public class ThreadStateTest {
 
     public static void main(String[] args) throws InterruptedException {
-        ThreadState state = new ThreadState();            // 创建State对象
-        Thread thread = new Thread();                     // 利用State对象创建Thread对象
+        ThreadState state = new ThreadState();  // 创建State对象
+        Thread thread = new Thread();           // 利用State对象创建Thread对象
         System.out.println("新建线程：" + thread.getState());  // 输出线程状态
         thread.start();                         // 调用thread对象的start方法，启动新线程
         System.out.println("启动线程：" + thread.getState());  // 输出线程状态
