@@ -1,4 +1,4 @@
-package java5;
+package java8;
 
 import java.util.function.Consumer;
 
