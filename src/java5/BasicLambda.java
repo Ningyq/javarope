@@ -24,7 +24,7 @@ public class BasicLambda {
 
     public static void main(String[] args) {
         List<Integer> numbers  = new ArrayList<>();
-        numbers.addAll(Arrays.asList(10,8,3,4,7,2,4,3,2,4));
+        numbers.addAll(Arrays.asList(10,8,3,4,7,2,4,3,2,4,9,7,4,7,0,3,5,1));
 
         System.out.println(sumWithCondition(numbers, i -> i % 2 == 0));
     }
