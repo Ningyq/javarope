@@ -19,13 +19,18 @@ public class BasicLambda {
 //            }
 //        }
 //        return sum;
-        return numbers.parallelStream().filter(predicate).peek(System.out::println).mapToInt(i -> i).sum();
+
+        return numbers.parallelStream()
+                .filter(predicate)
+                .peek(System.out::println)
+                .mapToInt(i -> i)
+                .sum();
     }
 
     public static void main(String[] args) {
         List<Integer> numbers  = new ArrayList<>();
         numbers.addAll(Arrays.asList(10,8,3,4,7,2,4,3,2,4,9,7,4,7,0,3,5,1));
 
-        System.out.println(sumWithCondition(numbers, i -> i % 2 == 0));
+        System.out.println(sumWithCondition(numbers, i -> i % 2 != 0));
     }
 }

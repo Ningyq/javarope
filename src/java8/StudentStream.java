@@ -2,6 +2,7 @@ package java8;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
 public class StudentStream {

@@ -23,13 +23,21 @@ public class BasicLam {
                 .allMatch(n -> number % n != 0);
     }
 
+//    public static int findSquareOfMaxOdd(List<Integer> numbers) {
+//        return numbers.stream()
+//                .filter(i -> i % 2 != 0)
+//                .filter(i -> i > 3)
+//                .filter(i -> i < 100)
+//                .max(Comparator.naturalOrder())
+//                .map(i -> i * i)
+//                .get();
+//    }
+
     public static int findSquareOfMaxOdd(List<Integer> numbers) {
         return numbers.stream()
-                .filter(i -> i % 2 != 0)
-                .filter(i -> i > 3)
-                .filter(i -> i < 100)
+                .filter(i -> i % 2 != 0 && i > 3 && i< 100)
                 .max(Comparator.naturalOrder())
-                .map(i -> i * i)
+                .map(i -> i)
                 .get();
     }
 
