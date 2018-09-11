@@ -59,4 +59,36 @@ public class HiController {
         productService.addProduct(product);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
+
+    @PostMapping("/product/delete")
+    public ResponseEntity<Void> deleteProduct(@RequestBody String name) {
+
+        System.out.println("Fetching Product which name: " + name);
+
+        Product product = productService.getProduct(name);
+
+        if (product == null) {
+            System.out.println("Fetching Product which name " + name + "not found");
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+
+        productService.deleteProduct(product);
+        return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
+    @PostMapping("/product/update")
+    public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
+
+        System.out.println("Fetching Product which name: " + product.getName());
+
+        Product product1 = productService.getProduct(product.getName());
+
+        if (product1 == null) {
+            System.out.println("Fetching Product which name " + product.getName() + "not found");
+            return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
+        }
+
+        productService.updateProduct(product, product1);
+        return new ResponseEntity<Product>(HttpStatus.OK);
+    }
 }
