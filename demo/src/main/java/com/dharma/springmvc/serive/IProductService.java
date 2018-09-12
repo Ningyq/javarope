@@ -10,8 +10,6 @@ public interface IProductService {
 
     Product getProduct(long id);
 
-    Product getProduct(String name);
-
     boolean isProductExist(Product product);
 
     void addProduct(Product product);

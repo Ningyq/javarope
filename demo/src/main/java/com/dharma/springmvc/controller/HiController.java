@@ -60,35 +60,36 @@ public class HiController {
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
-    @PostMapping("/product/delete")
-    public ResponseEntity<Void> deleteProduct(@RequestBody String name) {
+    @PutMapping("/product/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable long id, @RequestBody Product product) {
 
-        System.out.println("Fetching Product which name: " + name);
+        System.out.println("Fetching Product which id = " + id);
 
-        Product product = productService.getProduct(name);
+        Product current = productService.getProduct(id);
 
-        if (product == null) {
-            System.out.println("Fetching Product which name " + name + "not found");
-            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
-        }
-
-        productService.deleteProduct(product);
-        return new ResponseEntity<Void>(HttpStatus.OK);
-    }
-
-    @PostMapping("/product/update")
-    public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
-
-        System.out.println("Fetching Product which name: " + product.getName());
-
-        Product product1 = productService.getProduct(product.getName());
-
-        if (product1 == null) {
-            System.out.println("Fetching Product which name " + product.getName() + "not found");
+        if (current == null) {
+            System.out.println("Fetching Product which id = " + id + "not found");
             return new ResponseEntity<Product>(HttpStatus.NO_CONTENT);
         }
 
-        productService.updateProduct(product, product1);
+        productService.updateProduct(product, current);
+
         return new ResponseEntity<Product>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/product/{id}")
+    public ResponseEntity<Void> deleteProduct(@PathVariable long id) {
+
+        System.out.println("Fetching Product which id = " + id);
+
+        Product deleteProduct = productService.getProduct(id);
+
+        if (deleteProduct == null) {
+            System.out.println("Fetching Product which id = " + id + "not found");
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        }
+
+        productService.deleteProduct(deleteProduct);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 }

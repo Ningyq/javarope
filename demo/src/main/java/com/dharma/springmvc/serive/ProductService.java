@@ -45,16 +45,6 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Product getProduct(String name) {
-        for (Product product : products) {
-            if (product.getName().equalsIgnoreCase(name)) {
-                return product;
-            }
-        }
-        return null;
-    }
-
-    @Override
     public boolean isProductExist(Product product) {
         for (Product product1 : products) {
             if (product1.getName().equalsIgnoreCase(product.getName())) {
@@ -76,8 +66,9 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void updateProduct(Product product, Product product1) {
-        product1.setPrice(product.getPrice());
-        product1.setCount(product.getCount());
+    public void updateProduct(Product product, Product current) {
+        current.setName(product.getName());
+        current.setPrice(product.getPrice());
+        current.setCount(product.getCount());
     }
 }
