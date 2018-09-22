@@ -27,7 +27,7 @@ public class ProductController {
 
     @InitBinder
     private void initBinder(WebDataBinder binder) {
-
+        binder.setValidator(validator);
     }
 
     public ProductController() {
@@ -54,6 +54,7 @@ public class ProductController {
             return "productSave";
         }
 
+        model.addAttribute("product", product);
         products.put(product.getId(), product);
         return "success";
     }
