@@ -31,7 +31,7 @@ public class HomeController {
 
     @Bean
     public Product product() {
-        return new Product(666L, "Thanks god you are coming", 9999999.0);
+        return new Product(666, "Thanks god you are coming", 9999999.0);
     }
 
     @RequestMapping
@@ -56,6 +56,6 @@ public class HomeController {
 
     @GetMapping("/product/{name}/{price}")
     public Product getProduct(@PathVariable String name, @PathVariable Double price) {
-        return new Product(999L, name, price);
+        return new Product(999, name, price);
     }
 }
